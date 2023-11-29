@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: video_metrics
+    description: "This model combines data from stg_comment_count, stg_likes_count, and stg_view_count to create a comprehensive view of video metrics. It materializes the data as a table."
+    columns:
+      - name: id
+        description: "Unique identifier derived from comment count data, used to join with likes and view count data."
+        tests:
+          - unique
+          - not_null
+      - name: file_date
+        description: "Date associated with the comment count data."
+        tests:
+          - not_null
+      - name: video_id
+        description: "Unique identifier of the video."
+        tests:
+          - not_null
+      - name: comment_count
+        description: "Count of comments on the video."
+      - name: view_count
+        description: "Number of views of the video."
+        tests:
+          - not_null
+      - name: likes
+        description: "Number of likes on the video."
+      - name: dislikes
+        description: "Number of dislikes on the video."
+    materialized: view

@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: video_info
+    description: "This model transforms and consolidates data from stg_video_info into a more usable format for video metrics analysis. It materializes the data as a table."
+    columns:
+      - name: id
+        description: "Concatenation of 'file_date' and 'video_id', serving as a unique identifier."
+        tests:
+          - unique
+          - not_null
+      - name: trending_date
+        description: "Date the video started trending."
+        tests:
+          - not_null
+      - name: video_id
+        description: "Unique identifier of the video."
+        tests:
+          - not_null
+      - name: title
+        description: "Title of the video."
+        tests:
+          - not_null
+      - name: description
+        description: "Description of the video."
+      - name: published_at
+        description: "Timestamp of when the video was published."
+        tests:
+          - not_null
+      - name: tags
+        description: "Tags associated with the video."
+      - name: categoryId
+        description: "Category ID of the video."
+        tests:
+          - not_null
+      - name: channelId
+        description: "Channel ID of the video."
+        tests:
+          - not_null
+      - name: channelTitle
+        description: "Title of the channel."
+        tests:
+          - not_null
+      - name: comments_disabled
+        description: "Boolean indicating if comments are disabled."
+        tests:
+          - accepted_values:
+              values: [true, false]
+      - name: ratings_disabled
+        description: "Boolean indicating if ratings are disabled."
+        tests:
+          - accepted_values:
+              values: [true, false]
+      - name: thumbnail_link
+        description: "Link to the video's thumbnail."
+        tests:
+          - not_null
+    materialized: view

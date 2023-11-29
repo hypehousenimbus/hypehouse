@@ -1,0 +1,29 @@
+models:
+  - name: average_tags
+    description: "This view provides the average number of tags used in trending YouTube videos, grouped and ordered by the trending date."
+
+  - name: average_view_count_per_category_id
+    description: "This view calculates the average view count of trending YouTube videos per category, providing insights into the popularity of different video categories."
+
+  - name: change_analysis_view
+    description: "This view highlights the views, comments, and likes changes between the last day before a trending streak is interrupted and the first day after the interruption"  
+  
+  - name: channel_centric_view
+    description: "This view focuses on the overall performance of the creator during their trending streaks. It shows the number of video that trended for more consecutive days and includes the min, max, and average likes, views, and comment counts."
+  
+  - name: consecutive_days_trending_creators
+    description: "This view shows the creators that published videos that trended on multiple consecutive days."
+
+  - name: detailed_analysis_view
+    description: "This view includes the average metrics across the trending videos of each creator, as well as the total number of videos that trended consecutively. This provides a more granular look at each creator's performance."
+
+  - name: non_consecutive_days_trending_creators
+    description: "This view shows the creators that published videos that trended on non-consecutive days."
+
+  - name: trending_creators_avg_metrics
+    description: "This view shows the number of trending videos per channel, including average likes, comments, and views"
+
+  - name: trending_videos_per_channel_title
+    description: "This view shows the number of trending videos per channel, helping to identify which channels have the most trending content."
+
+materialized: view
