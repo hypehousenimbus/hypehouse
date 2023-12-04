@@ -21,8 +21,8 @@ hypehouse:
       account: ud42201.west-europe.azure
 
       # User credentials
-      user: darko
-      password: Darkomind1!
+      user: darkosnowflake
+      password: Snowflake1!
 
       # Database and schema
       database: prd
