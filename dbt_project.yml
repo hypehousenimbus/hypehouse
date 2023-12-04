@@ -44,5 +44,3 @@ models:
       +materialized: view  # Note the corrected indentation here
       core:  # This is the subdirectory under 'marts'
         +materialized: table
-    view:
-        +materialized: view
