@@ -3,12 +3,12 @@ hypehouse:
   outputs:
     dev:
       type: snowflake
-      account: cs66148.west-europe.azure
+      account: ud42201.west-europe.azure
 
 
       # User credentials
-      user: darko
-      password: Darkomind1!
+      user: darkosnowflake
+      password: Snowflake1!
 
       # Database and schema
       database: dev
@@ -18,7 +18,7 @@ hypehouse:
 
     prd:
       type: snowflake
-      account: cs66148.west-europe.azure
+      account: ud42201.west-europe.azure
 
       # User credentials
       user: darko
