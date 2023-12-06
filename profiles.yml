@@ -29,6 +29,3 @@ hypehouse:
       schema: prd
       warehouse: DBT_TRANSFORMING
       role: developer
-
-    # Additional environments (staging, etc.) can be added similarly
-    
